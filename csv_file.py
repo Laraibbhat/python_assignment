@@ -27,6 +27,8 @@ def find_average_age_for_dept(dept, emp_data):
         avg_age=sum([x['age'] for x in emp_data if x['dept'] == dept]) / len([x['age'] for x in emp_data if x['dept'] == dept]) #working code
     except ZeroDivisionError:
         return 0.0'''
+
+    
     avg_age= statistics.mean([x['age'] for x in emp_data if x['dept'] == dept] or [0.0])
     return avg_age
 
